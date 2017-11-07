@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :manifestations
-  resources :users
+  resources :model
   resources :homes
   devise_for :models
 
