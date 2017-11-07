@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-
-
-  resources :manifestations
-  resources :model
-
   devise_for :models
   resources :manifestations
   resources :models
