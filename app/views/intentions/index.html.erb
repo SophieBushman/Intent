@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Intentions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @intentions.each do |intention| %>
+      <tr>
+        <td><%= link_to 'Show', intention %></td>
+        <td><%= link_to 'Edit', edit_intention_path(intention) %></td>
+        <td><%= link_to 'Destroy', intention, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Intention', new_intention_path %>
