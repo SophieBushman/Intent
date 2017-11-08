@@ -1,0 +1,47 @@
+<%= form_with(model: reflection, local: true) do |form| %>
+  <% if reflection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reflection.errors.count, "error") %> prohibited this reflection from being saved:</h2>
+
+      <ul>
+      <% reflection.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :emotions %>
+    <%= form.text_area :emotions, id: :reflection_emotions %>
+  </div>
+
+  <div class="field">
+    <%= form.label :high_point %>
+    <%= form.text_area :high_point, id: :reflection_high_point %>
+  </div>
+
+  <div class="field">
+    <%= form.label :low_point %>
+    <%= form.text_area :low_point, id: :reflection_low_point %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mood %>
+    <%= form.number_field :mood, id: :reflection_mood %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gratitudes %>
+    <%= form.text_area :gratitudes, id: :reflection_gratitudes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :anything_else %>
+    <%= form.text_area :anything_else, id: :reflection_anything_else %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

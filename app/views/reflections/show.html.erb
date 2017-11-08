@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+<div class="reflection">
+<p>
+  <strong>Emotions:</strong>
+  <%= @reflection.emotions %>
+</p>
+
+<br>
+<p>
+  <strong>High point:</strong>
+  <%= @reflection.high_point %>
+</p>
+
+<p>
+  <strong>Low point:</strong>
+  <%= @reflection.low_point %>
+</p>
+
+<p>
+  <strong>Mood:</strong>
+  <%= @reflection.mood %>
+</p>
+
+<p>
+  <strong>Gratitudes:</strong>
+  <%= @reflection.gratitudes %>
+</p>
+
+<p>
+  <strong>Anything else:</strong>
+  <%= @reflection.anything_else %>
+</p>
+</div>
+<%= link_to 'Edit', edit_reflection_path(@reflection) %> |
+<%= link_to 'Back', reflections_path %>
