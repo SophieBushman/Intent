@@ -1,2 +1,3 @@
 class Manifestation < ApplicationRecord
 end
+

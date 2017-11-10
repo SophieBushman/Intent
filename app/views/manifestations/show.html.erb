@@ -5,16 +5,28 @@
   <%= @manifestation.immediate %>
 </p>
 
+<br>
 
 <p>
   <strong>Short term:</strong>
   <%= @manifestation.short_term %>
 </p>
 
+<br>
+
 <p>
   <strong>Long term:</strong>
   <%= @manifestation.long_term %>
 </p>
 
+<br>
+
+<p>
+<strong>Published at:</strong>
+  <%= @manifestation.created_at %>
+</p>
+
+<br>
+
 <%= link_to 'Edit', edit_manifestation_path(@manifestation) %> |
-<%= link_to 'Back', manifestations_path %>
+<%= link_to 'Back', homes_path %>

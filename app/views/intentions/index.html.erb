@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Intentions</h1>
-
+  <%= link_to "My Account", current_model %>
+   <%= link_to('Logout', destroy_model_session_path, method: :delete) %> 
+   <%= link_to('reflections', reflections_path) %> 
+   <%= link_to('manifestations', manifestations_path) %>
 <table>
   <thead>
     <tr>

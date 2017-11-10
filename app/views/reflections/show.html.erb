@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 <div class="reflection">
+
 <p>
+
   <strong>Emotions:</strong>
   <%= @reflection.emotions %>
 </p>
@@ -11,25 +13,41 @@
   <%= @reflection.high_point %>
 </p>
 
+<br>
 <p>
   <strong>Low point:</strong>
   <%= @reflection.low_point %>
 </p>
 
+<br>
 <p>
   <strong>Mood:</strong>
   <%= @reflection.mood %>
 </p>
+
+<br>
 
 <p>
   <strong>Gratitudes:</strong>
   <%= @reflection.gratitudes %>
 </p>
 
+<br>
+
 <p>
   <strong>Anything else:</strong>
   <%= @reflection.anything_else %>
 </p>
+
+<br>
+
+<p>
+<strong>Published at:</strong>
+  <%= @reflection.created_at %>
+</p>
+
 </div>
-<%= link_to 'Edit', edit_reflection_path(@reflection) %> |
+<br>
+
+<%= link_to 'Edit', edit_reflection_path(@reflection) %> 
 <%= link_to 'Back', reflections_path %>

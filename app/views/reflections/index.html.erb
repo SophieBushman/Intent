@@ -2,6 +2,11 @@
 
 <h1>Reflections</h1>
 
+<%= link_to "My Account", current_model %>
+  <%= link_to('Logout', destroy_model_session_path, method: :delete) %>
+  <%= link_to('reflections', reflections_path) %>
+  <%= link_to('manifestations', manifestations_path) %>
+
 <table>
   <thead>
     <tr>
@@ -11,6 +16,7 @@
       <th>Mood</th>
       <th>Gratitudes</th>
       <th>Anything else</th>
+      <th>Published at</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,12 +24,14 @@
   <tbody>
     <% @reflections.each do |reflection| %>
       <tr>
+    
         <td><%= reflection.emotions %></td>
         <td><%= reflection.high_point %></td>
         <td><%= reflection.low_point %></td>
         <td><%= reflection.mood %></td>
         <td><%= reflection.gratitudes %></td>
         <td><%= reflection.anything_else %></td>
+        <td><%= reflection.created_at %></td>
         <td><%= link_to 'Show', reflection %></td>
         <td><%= link_to 'Edit', edit_reflection_path(reflection) %></td>
         <td><%= link_to 'Destroy', reflection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -35,3 +43,4 @@
 <br>
 
 <%= link_to 'New Reflection', new_reflection_path %>
+<%= link_to 'Back', homes_path %>

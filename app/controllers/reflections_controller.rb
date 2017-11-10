@@ -1,5 +1,5 @@
 class ReflectionsController < ApplicationController
-  before_action :set_reflection, only: [:show, :edit, :update, :destroy]
+  before_action :set_reflection, only: [:show, :edit, :update, :destroy, :publish]
 
   # GET /reflections
   # GET /reflections.json
@@ -10,6 +10,7 @@ class ReflectionsController < ApplicationController
   # GET /reflections/1
   # GET /reflections/1.json
   def show
+    @reflection = Reflection.find(params["id"])
   end
 
   # GET /reflections/new
@@ -19,6 +20,10 @@ class ReflectionsController < ApplicationController
 
   # GET /reflections/1/edit
   def edit
+  end
+
+  def pushlish
+    @reflection.update(published_at: Time.zone.now)
   end
 
   # POST /reflections
@@ -69,6 +74,6 @@ class ReflectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reflection_params
-      params.require(:reflection).permit(:emotions, :high_point, :low_point, :mood, :gratitudes, :anything_else)
+      params.require(:reflection).permit(:model_ids, :emotions, :high_point, :low_point, :mood, :gratitudes, :anything_else)
     end
 end
