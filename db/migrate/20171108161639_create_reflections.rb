@@ -8,7 +8,7 @@ class CreateReflections < ActiveRecord::Migration[5.1]
       t.text :gratitudes
       t.text :anything_else
 
-      t.timestamps
+      t.timestamps 
     end
   end
 end

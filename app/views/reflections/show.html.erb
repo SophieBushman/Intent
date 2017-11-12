@@ -43,7 +43,8 @@
 
 <p>
 <strong>Published at:</strong>
-  <%= @reflection.created_at %>
+  <%= @reflection.created_at.strftime("%b. %d %Y") %>
+
 </p>
 
 </div>

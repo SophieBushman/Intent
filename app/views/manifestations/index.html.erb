@@ -2,11 +2,6 @@
 
 <h1>Manifestations</h1>
 
-<%= link_to "My Account", current_model %>
-  <%= link_to('Logout', destroy_model_session_path, method: :delete) %>
-  <%= link_to('reflections', reflections_path) %>
-  <%= link_to('manifestations', manifestations_path) %>
-
 <table>
   <thead>
     <tr>
@@ -24,7 +19,7 @@
         <td><%= manifestation.immediate %></td>
         <td><%= manifestation.short_term %></td>
         <td><%= manifestation.long_term %></td>
-        <td><%= manifestation.created_at %></td>
+        <td><%= manifestation.created_at.strftime("%b. %d %Y") %></td>
         <td><%= link_to 'Show', manifestation %></td>
         <td><%= link_to 'Edit', edit_manifestation_path(manifestation) %></td>
         <td><%= link_to 'Destroy', manifestation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
