@@ -22,7 +22,7 @@
       if (s == ""){
         return false;
       }else{
-        $(".tdl-content ul").append("<li><label><input type='checkbox'><i></i><span>"+ v +"</span><a href='#'>–</a></label></li>");
+        $(".tdl-content ul").append("<li><label><input type='checkbox'><i></i><span>"+ v +"</span><a href='homes'>–</a></label></li>");
         $(this).val("");
       }
     }

@@ -12,12 +12,12 @@
 <% end %>
 
 <% if model_signed_in? %>
-  <%= link_to "My Account", current_model %>
+ <nav> <%= link_to "My Account", current_model %>
   <%= link_to('Intentions', intentions_path) %>
   <%= link_to('Manifestations', manifestations_path) %>
   <%= link_to('Reflections', reflections_path) %> 
   <%= link_to('Logout', destroy_model_session_path, method: :delete) %>
-<% end %></center>
+<% end %></nav></center>
  
 
     <title>Intent</title>
