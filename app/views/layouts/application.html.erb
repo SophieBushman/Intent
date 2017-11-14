@@ -2,20 +2,24 @@
 <html>
   <head>
 
- <center><a href="http://localhost:3000/"><%= image_tag ("intent_header.png"), width:'450px', height:'200px' %> </center></a>
+ <center><a href="http://localhost:3000/homes"><%= image_tag ("intent_header.png"), width:'450px', height:'200px' %> </center></a>
 
 
 <center><% if !current_model %>
 
 <%= link_to "Sign Up", :new_model_registration %>
 <%= link_to "Log In", :new_model_session  %>
+
+
 <% end %>
 
+
 <% if model_signed_in? %>
- <nav> <%= link_to "My Account", current_model %>
+ <nav class="nav"> 
   <%= link_to('Intentions', intentions_path) %>
   <%= link_to('Manifestations', manifestations_path) %>
   <%= link_to('Reflections', reflections_path) %> 
+  <%= link_to('Habit Tracker', habits_path) %>
   <%= link_to('Logout', destroy_model_session_path, method: :delete) %>
 <% end %></nav></center>
  
@@ -24,10 +28,11 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 
-
-<link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+<!-- 
+<link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     
   </head>
 

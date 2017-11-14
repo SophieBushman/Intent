@@ -17,30 +17,39 @@
 <<<<<<< HEAD
  */
 body{
-	background-color: #CEC2FF;
+	font-family: 'Open Sans', sans-serif;
+	background-image: url("https://i.stack.imgur.com/xfn1X.jpg");
 	color: white;
 }
 
 .weather{
-	width: 250px;
-	height: 300px;
-	padding-top: 40px;
-	display: inline-block;
+	padding-top: 50px;
+	width: 400px;
+	display: inline-block;	
 }
 
 h3{
 	padding-top: 40px;
 	color: #564787;
+	display: inline-block;
 }
 
 .tdl-holder{
+	padding-top: 50px;
 	display: inline-block;
-	float: right;
-	padding-top: 40px;
-
 }
 
+.nav a{
+	text-decoration: none;
+	margin: 5px;
+	color: #564787;
+	font-size: 20px;
+}
 
+.homes{
+	font-size: 25px;
+	position: center;
+}
 
 /* to do list */
 
@@ -54,6 +63,16 @@ body{
 	line-height: 20px;
 }
 
+.TableRows{
+	font-size: 50px;
+
+}
+
+footer {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
 *:focus{outline:none !important;}
 
 
@@ -61,7 +80,7 @@ body{
 ================================================== */
 .tdl-holder{
 	margin:0px auto;
-	width: 300px;
+	width: 400px;
 }
 
 .tdl-holder h2{
@@ -183,7 +202,7 @@ body{
 	font-size:14px;
 	margin:0;
 	padding:20px 15px;
-	width:270px;
+	width:370px;
 	-webkit-transition: all .2s linear;
 	   -moz-transition: all .2s linear;
 	     -o-transition: all .2s linear;
@@ -231,6 +250,4 @@ body{
 
 
 
-=======
- */
->>>>>>> 2ec229d5c4ae326199009ff20f520ef0b2bec8b1
+

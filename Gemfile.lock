@@ -229,10 +229,8 @@ DEPENDENCIES
   rails-bootstrap-daterangepicker
   sass-rails (~> 5.0)
   selenium-webdriver
-
   simple_calendar (~> 2.2, >= 2.2.7)
   simple_form
-
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
@@ -243,5 +241,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.0
    1.16.0.pre.3

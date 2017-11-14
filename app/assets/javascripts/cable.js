@@ -28,7 +28,6 @@
     }
   });
 
-
   $(".tdl-content a").bind("click", function(){
     var _li = $(this).parent().parent("li");
         _li.addClass("remove").stop().delay(100).slideUp("fast", function(){

@@ -1,21 +1,23 @@
-<body style="background-color: #333;">
+<br> 
+<br>
+<body style="font-family: 'Open Sans', sans-serif;">
   <%= javascript_include_tag '/tracker' %>
-  <div style="background-color: #333">
-  <div class="container" style="background-color: #333;">
+  <div>
+  <div>
     <div id="app">
-      <h1>Habit Tracker</h1>
-      <div>
-        <input type="text" placeholder="Habit Title" v-model="newHabit" /><br />
-        <input type="number" placeholder="Repetitions" v-model="reps" /><br />
+      <h1 style="color: #564787; text-align: center; text-align: center;">Habit Tracker</h1>
+      <div style="align-items: center; text-align: center;">
+        <input type="text" placeholder="Habit Title" v-model="newHabit" style="align-items: center; text-align: center; font-family: 'Open Sans', sans-serif;" /><br />
+        <input type="number" placeholder="Repetitions" v-model="reps" style="align-items: center; text-align: center; font-family: 'Open Sans', sans-serif;"/><br />
         <button id="creator" @click="addHabit">Add</button>
       </div>
-      <div class="row habit">
+      <div class="row habit" style="width: 1380px;">
         <div v-for="habit in habits" class="four columns" transition="slide" :style="{ borderBottom: '5px solid ' + habit.random }">
-          <h4>{{ habit.title }}</h4>
+          <h4 style="color: #564787">{{ habit.title }}</h4>
           <div class="shell">
             <div class="bar" :style="{ width: 100 - habit.complete * (100 / habit.initial) + '%' }"></div>
           </div>
-          <div class="lower">
+          <div class="lower" style=" color: #564787">
             <span @click="removeHabit(habit)">
               <i class="fa fa-times"></i>
             </span>
