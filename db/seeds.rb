@@ -7,4 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
+Model.create([
+	{name: "veronica", firstname: "Veronica", lastname: "Martinez", email: "martinez@gmail.com", password: "password"},
+	{name: "sophie", firstname: "Sophie", lastname: "Bushman", email: "sophie@gmail.com", password: "password"},
+	{name: "valerie", firstname: "Valerie", lastname: "Kirk", email: "valerie@gmail.com", password: "password"}
+])
+	

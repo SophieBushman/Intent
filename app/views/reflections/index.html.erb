@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reflections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Emotions</th>
+      <th>High point</th>
+      <th>Low point</th>
+      <th>Mood</th>
+      <th>Gratitudes</th>
+      <th>Anything else</th>
+      <th>Published at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reflections.each do |reflection| %>
+      <tr>
+    
+        <td><%= reflection.emotions %></td>
+        <td><%= reflection.high_point %></td>
+        <td><%= reflection.low_point %></td>
+        <td><%= reflection.mood %></td>
+        <td><%= reflection.gratitudes %></td>
+        <td><%= reflection.anything_else %></td>
+        <td><%= reflection.created_at.strftime("%b. %d %Y") %></td>
+        <td><%= link_to 'Show', reflection %></td>
+        <td><%= link_to 'Edit', edit_reflection_path(reflection) %></td>
+        <td><%= link_to 'Destroy', reflection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reflection', new_reflection_path %>
+<%= link_to 'Back', homes_path %>

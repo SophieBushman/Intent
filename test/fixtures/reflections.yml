@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  emotions: MyText
+  high_point: MyText
+  low_point: MyText
+  mood: 1
+  gratitudes: MyText
+  anything_else: MyText
+
+two:
+  emotions: MyText
+  high_point: MyText
+  low_point: MyText
+  mood: 1
+  gratitudes: MyText
+  anything_else: MyText

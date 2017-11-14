@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+ <center> <%= image_tag ("intent_header.png"), width:'450px', height:'200px' %> </center>
+
+
+<center><% if !current_model %>
+
+<%= link_to "Sign Up", :new_model_registration %>
+<%= link_to "Log In", :new_model_session %>
+<% end %>
+
+<% if model_signed_in? %>
+ <nav> <%= link_to "My Account", current_model %>
+  <%= link_to('Intentions', intentions_path) %>
+  <%= link_to('Manifestations', manifestations_path) %>
+  <%= link_to('Reflections', reflections_path) %> 
+  <%= link_to('Logout', destroy_model_session_path, method: :delete) %>
+<% end %></nav></center>
+ 
+
     <title>Intent</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
@@ -14,6 +34,11 @@
        <p class="alert"><%= alert %></p>
 
     <%= yield %>
+
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
 
   </body>
 </html>

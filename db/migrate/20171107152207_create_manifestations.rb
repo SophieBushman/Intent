@@ -4,7 +4,7 @@ class CreateManifestations < ActiveRecord::Migration[5.1]
       t.string :immediate
       t.string :short_term
       t.string :long_term
-
+      
       t.timestamps
     end
   end

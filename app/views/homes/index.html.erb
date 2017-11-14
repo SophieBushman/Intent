@@ -1,15 +1,54 @@
-<h1>Welcome!</h1>
+<body>
 
-<% if !current_model %>
+<time id="row1"></time>
+<h3><time id="row2"></time></h3>
+	<script type="text/javascript">
+function updateClock() {
+//© OBH 2017 - www.oliverboorman.biz 
 
-<%= link_to "Sign Up", :new_model_registration %>
-<%= link_to "Log In", :new_model_session %>
-<% end %>
-<br>
-<br>
+var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-<% if model_signed_in? %>
-  <%= link_to "My Account", current_model %>
-  <%= link_to('Logout', destroy_model_session_path, method: :delete) %>
-<% end %>
+var now = new Date();
+var day = now.getDay();
+var date = now.getDate();
+var month = now.getMonth();
+var year = now.getFullYear();
+
+if(date<10) date = "0" + date;
+
+var secondRow = months[month] + "&nbsp;" + days[day] + "&nbsp;" + date + "," + "&nbsp;" + year + '';
+document.getElementById("row2").innerHTML = secondRow;
+
+setTimeout("updateClock()",1000);
+} 
+</script>
+<script type="text/javascript">updateClock();</script>
+
+
+<div class="weather">
+<a href="https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
+<!--
+By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at https://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at https://www.accuweather.com/en/privacy.
+-->
+</a><div id="awcc1510352813842" class="aw-widget-current"  data-locationkey="" data-unit="f" data-language="en-us" data-useip="true" data-uid="awcc1510352813842"></div><script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script></div>
+
+<div class="tdl-holder">
+	<h2>TODAY'S TO DO LIST</h2>
+		<div class="tdl-content">
+			<ul>
+				<li><label><input type="checkbox"><i></i><span>Shower</span><a href='homes'>–</a></label></li>
+				<li><label><input type="checkbox" checked><i></i><span>Eat breakfast</span><a href='homes'>–</a></label></li>
+				<li><label><input type="checkbox"><i></i><span>Go to school</span><a href='homes'>–</a></label></li>
+		
+			</ul>
+		</div>
+	<input type="text" class="tdl-new" placeholder="Write new item and hit 'Enter'...">
+</div>
+
+
+
+
+
+</body>
 

@@ -21,6 +21,10 @@ class ManifestationsController < ApplicationController
   def edit
   end
 
+  def pushlish
+    @manifestation.update(published_at: Time.zone.now)
+  end
+
   # POST /manifestations
   # POST /manifestations.json
   def create
