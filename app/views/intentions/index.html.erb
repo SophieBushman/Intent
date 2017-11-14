@@ -2,6 +2,7 @@
 <h1>Intentions</h1>
 
 
+<<<<<<< HEAD
 <% start_date =  params.fetch(:start_date, Date.today).to_date %>
 <% date_range = (start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week).to_a %>
 
@@ -35,6 +36,11 @@
   </tbody>
 </table>
 
+=======
+<div class="calendar"></div>
+
+<div id="remote_container"></div>
+>>>>>>> 2ec229d5c4ae326199009ff20f520ef0b2bec8b1
 
 <table>
   <thead>
@@ -45,6 +51,17 @@
       <th colspan="3"></th>
     </tr>
   </thead>
+
+
+<!-- Below is the Calendar code -->
+
+
+
+
+<!-- This is the end of the calendar code -->
+
+
+
 
   <tbody>
     <% @intentions.each do |intention| %>

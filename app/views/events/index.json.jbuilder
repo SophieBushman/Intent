@@ -1,6 +1,10 @@
 # json.array! @events, partial: 'events/event', as: :event
 
+<<<<<<< HEAD
 json.array @events do |event|
+=======
+json.array! @events do |event|
+>>>>>>> 2ec229d5c4ae326199009ff20f520ef0b2bec8b1
   date_format = event.all_day_event? ? '%Y-%m-%d' : '%Y-%m-%dT%H:%M:%S'
   json.id event.id
   json.title event.title
