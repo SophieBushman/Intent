@@ -11,6 +11,8 @@ module Intent
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
+    config.time_zone = 'Central Time (US & Canada)'
+
 	config.beginning_of_week = :sunday
 
     # Settings in config/environments/* take precedence over those specified here.

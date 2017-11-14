@@ -36,6 +36,8 @@ By accessing and/or using this code snippet, you agree to AccuWeather’s terms 
 -->
 </a><div id="awcc1510352813842" class="aw-widget-current"  data-locationkey="" data-unit="f" data-language="en-us" data-useip="true" data-uid="awcc1510352813842"></div><script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script></div>
 
+
+<% if model_signed_in? %>
 <div class="tdl-holder">
 	<h2>TODAY'S TO DO LIST</h2>
 		<div class="tdl-content">
@@ -48,6 +50,9 @@ By accessing and/or using this code snippet, you agree to AccuWeather’s terms 
 		</div>
 	<input type="text" class="tdl-new" placeholder="Write new item and hit 'Enter'...">
 </div>
+<% end %>
+
+
 
 
 

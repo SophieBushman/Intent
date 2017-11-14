@@ -8,7 +8,7 @@
 <center><% if !current_model %>
 
 <%= link_to "Sign Up", :new_model_registration %>
-<%= link_to "Log In", :new_model_session %>
+<%= link_to "Log In", :new_model_session  %>
 <% end %>
 
 <% if model_signed_in? %>
@@ -22,10 +22,11 @@
 
     <title>Intent</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+ 
   </head>
 
   <body>
@@ -34,9 +35,11 @@
        <p class="alert"><%= alert %></p>
 
     <%= yield %>
+
     <script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
 </html>
