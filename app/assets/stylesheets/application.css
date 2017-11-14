@@ -10,8 +10,11 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require fullcalendar
+ *= require bootstrap-daterangepicker-3
  *= require_tree .
  *= require_self
+<<<<<<< HEAD
  */
 body{
 	background-color: #CEC2FF;
@@ -228,3 +231,6 @@ body{
 
 
 
+=======
+ */
+>>>>>>> 2ec229d5c4ae326199009ff20f520ef0b2bec8b1

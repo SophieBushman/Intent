@@ -48,10 +48,21 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+<<<<<<< HEAD
   gem 'devise', '~> 4.3'
   gem 'bootstrap', '~> 4.0.0.beta2.1'
   gem 'simple_calendar', '~> 2.2', '>= 2.2.7'
 end
+=======
+>>>>>>> 2ec229d5c4ae326199009ff20f520ef0b2bec8b1
 
+
+end
+  gem 'jquery-rails'
+  gem 'devise', '~> 4.3'
+  gem 'fullcalendar-rails'
+  gem 'momentjs-rails'
+  gem 'simple_form'
+  gem 'rails-bootstrap-daterangepicker'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
