@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Reflections</h1>
-
-<table class="tables">
-  <thead>
+<p style="font-family: 'Open Sans', sans-serif; text-align: center; font-size: 45px; color: #564787">Reflections</p>
+<table style="color: #564787; align-items: center;">
+  <thead style="align-items: center; text-align: center;">
+    <div class="TableRows">
     <tr>
       <th>Emotions</th>
       <th>High point</th>
@@ -14,16 +13,14 @@
       <th>Published at</th>
       <th colspan="3"></th>
     </tr>
+    </div>
   </thead>
 
   <tbody>
     <% @reflections.each do |reflection| %>
       <tr>
-    
         <td><%= reflection.emotions %></td>
-       
         <td><%= reflection.high_point %></td>
-    
         <td><%= reflection.low_point %></td>
         <td><%= reflection.mood %></td>
         <td><%= reflection.gratitudes %></td>

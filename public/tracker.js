@@ -18,13 +18,14 @@ document.addEventListener("turbolinks:load",function(){
     data: {
       habits: [
         {
-          title: 'Bike',
-          reps: 3,
-          initial: 3,
+          title: 'Exercise Daily',
+          reps: 30,
+          initial: 30,
           complete: 0,
           random: "#E45A84",
           finished: false
         }
+        
       ],
       newHabit: '',
       reps: '',
