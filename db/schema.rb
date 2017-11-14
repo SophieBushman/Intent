@@ -12,6 +12,14 @@
 
 ActiveRecord::Schema.define(version: 20171108161639) do
 
+  create_table "habits", force: :cascade do |t|
+    t.string "habit_name"
+    t.integer "goal"
+    t.integer "current_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "homes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -31,6 +39,7 @@ ActiveRecord::Schema.define(version: 20171108161639) do
   end
 
   create_table "models", force: :cascade do |t|
+    t.string "name"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
