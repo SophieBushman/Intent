@@ -12,12 +12,12 @@
 //= require jquery
 //= require moment
 //= require bootstrap-daterangepicker
+//
+//= require vue
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-<<<<<<< HEAD
 
-=======
 //= require moment 
 //= require fullcalendar
 
